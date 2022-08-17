@@ -102,6 +102,7 @@ namespace Decryption_Application
         {
             if (!string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(textBox3.Text))
             {
+                textBox2.Clear();
                 Text = Encipher(textBox1.Text, textBox3.Text);
 
                 textBox2.AppendText(Text);
