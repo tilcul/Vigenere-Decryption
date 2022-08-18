@@ -32,6 +32,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -120,11 +123,40 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Output";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(286, 366);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(200, 34);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Generate Random Key";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(295, 409);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 25);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Key Length:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(404, 407);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(31, 31);
+            this.textBox4.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 450);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
@@ -152,5 +184,8 @@
         private Button button3;
         private Label label2;
         private Label label3;
+        private Button button4;
+        private Label label4;
+        private TextBox textBox4;
     }
 }

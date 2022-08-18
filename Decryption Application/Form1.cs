@@ -395,5 +395,28 @@ namespace Decryption_Application
         {
 
         }
+        string randomKey(int keyLength)
+        {
+            Random rand = new Random();
+
+            int[] newArray = new int[keyLength];
+            for (int i = 0; i < newArray.Length; i++)
+            {
+                int letterNumber = rand.Next(0, 25);
+                newArray[i] = letterNumber;
+            }
+            string finalArray = convertToString(newArray);
+            return finalArray;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(textBox4.Text) && int.TryParse(textBox4.Text, out int value))
+            {
+                textBox3.Clear();
+                Text = randomKey(Int16.Parse(textBox4.Text));
+                textBox3.AppendText(Text);
+            }
+        }
     }
 }
